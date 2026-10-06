@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-header  { background-color: #2c3e50; color: white; }
+.main-nav     { background-color: #34495e; color: white; }
+.main-section { background-color: #ecf0f1; }
+.main-aside   { background-color: #d2d7d9; }
+.main-footer  { background-color: #2c3e50; color: white; }
+
+.main-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    background-color: #e74c3c;
+    padding: 15px 25px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.main-nav {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+}
+
+.menu-icon {
+    display: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.main-section {
+    width: 70%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.main-aside {
+    width: 30%;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+}
+
+.main-footer {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+
+@media (max-width: 1000px) {
+    .main-section {
+        width: 60%;
+        background-color: #e8daef; 
+    }
+    .main-aside {
+        width: 40%;
+        background-color: #fadbd8; 
+    }
+}
+
+@media (max-width: 800px) {
+    .content-wrapper {
+        flex-direction: row; 
+    }
+    .main-section {
+        width: 50%;
+        grid-template-columns: 1fr;
+    }
+    .main-aside {
+        width: 50%;
+    }
+}
+
+@media (max-width: 680px) {
+    .main-header {
+        flex-direction: column-reverse;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+    .main-section {
+        width: 100%;
+    }
+    .main-aside {
+        width: 100%;
+    }
+
+    .nav-item {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+        padding: 10px;
+    }
+}
